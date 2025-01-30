@@ -7,4 +7,4 @@ steps:
       - 'pip install -r requirements.txt && pytest'
 
 options:
-  logsBucket: 'gs://gsd-ai-mx-danielazamora-cloudbuild-ai-app'
+  defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
