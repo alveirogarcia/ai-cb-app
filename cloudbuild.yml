@@ -5,3 +5,6 @@ steps:
     args:
       - '-c'
       - 'pip install -r requirements.txt && pytest'
+
+options:
+  logsBucket: 'gs://gsd-ai-mx-danielazamora-cloudbuild-ai-app'
