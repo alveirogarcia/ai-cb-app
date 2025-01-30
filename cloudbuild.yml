@@ -11,7 +11,7 @@ steps:
     entrypoint: 'bash'
     args:
       - '-c'
-      - 'pylint main.py'
+      - 'pip install -r requirements.txt && pylint main.py'
 
 options:
   defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
