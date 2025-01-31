@@ -2,5 +2,5 @@
 
 def summing():
     """This method is for sum"""
-    return 1+2
+    return 1+1
     
