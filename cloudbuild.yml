@@ -28,7 +28,7 @@ steps:
       - '--region'
       - 'us-central1' # Replace with your region
       - '--entry-point'
-      - 'my_function'  # Replace with your function's entry point
+      - 'summing'  # Replace with your function's entry point
 
 options:
   defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
