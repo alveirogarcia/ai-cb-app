@@ -13,5 +13,22 @@ steps:
       - '-c'
       - 'pip install -r requirements.txt && pylint main.py'
 
+  # Deploy to Cloud Functions
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    args:
+      - 'gcloud'
+      - 'functions'
+      - 'deploy'
+      - 'my-function'  # Replace with your function name
+      - '--runtime'
+      - 'python39'    # Replace with your runtime
+      - '--trigger-http'
+      - '--source'
+      - '.'
+      - '--region'
+      - 'us-central1' # Replace with your region
+      - '--entry-point'
+      - 'my_function'  # Replace with your function's entry point
+
 options:
   defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
